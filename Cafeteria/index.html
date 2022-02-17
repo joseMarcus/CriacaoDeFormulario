@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Cafeteria Coador + Forte</title>
+</head>
+
+<body background="img/grao.jpg">
+	<div class="container bg-dark">
+    <div class="azul p-3 mb-2 text-white">
+		  <h1 class=" display-3 text-center font-weight-light">CARDÁPIO</h1>
+      <h1 class="font-weight-light text-center">Cafeteria Coador + Forte</h1>
+    </div>
+		<div class="text-right">
+			<button
+        type="button"
+        class="btn btn-light mr-4 font-weight-bold"
+        id="newBtnFood"
+        data-toggle="modal"
+        data-target="#formFoodModal"
+        onclick="loadFormCreateFood()">
+        Adicionar Item(+)
+      </button>
+    </div>
+
+    <section class="card-deck my-3"></section>
+
+    <form id="formFood">
+      <div class="modal fade" id="formFoodModal" tabindex="-1" aria-labelledby="formFoodLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="formFoodLabel"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="food-name">Nome</label>
+                <input type="text" class="form-control" id="food-name" name="name">
+              </div>
+              <div class="form-group">
+                <label for="food-image">Imagem</label>
+                <input type="text" class="form-control" id="food-image" name="image">
+              </div>
+              <div class="form-group">
+                <label for="food-descri">Descrição</label>
+                <input type="text" class="form-control" id="food-descri" name="descri">
+              </div>
+              <div class="form-group">
+                <label for="food-preco">Preço</label>
+                <input type="text" class="form-control" id="food-preco" name="preco">
+              </div>
+
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-primary">Cadastrar</button>
+              <button type="reset" class="btn btn-secondary">Limpar</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <form id="formDeleteFood">
+      <div class="modal fade" id="deleteFoodModal" tabindex="-1" aria-labelledby="deleteFoodLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="deleteFoodLabel">Excluir Item</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Deseja realmente excluir <span id="modal-name-food"></span>?
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+              <button type="button" class="btn btn-primary" id="deleteFoodBtn">Excluir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  <div>
+  <script src="js/lib/jquery.min.js"></script>
+  <script src="js/lib/popper.min.js"></script>
+  <script src="js/lib/bootstrap.min.js"></script>
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>

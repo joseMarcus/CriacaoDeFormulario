@@ -1,0 +1,11 @@
+{
+  "name": "CriacaoDeFormulario(Cafeteria)",
+  "version": "1.0.0 Beta",
+  "description": "Cafeteria Coador + Forte",
+  "main": "index.html",
+  "author": "José Marcus",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}
